@@ -17,7 +17,7 @@ namespace NachoPrompt
         /// <summary>
         /// The current library version number.
         /// </summary>
-        public static readonly string Version = "0.1.0";
+        public static readonly string Version = "1.0.0";
         private static string userChar = ": ";
         private static char findChar = '/';
         private static bool echoReturn = true;
