@@ -1,5 +1,5 @@
 # NPrompt
-![Static Badge](https://img.shields.io/badge/License-Apache_2.0-green?link=https%3A%2F%2Fgithub.com%2FTheGreatNacho%2FNPrompt%2Fblob%2Fmain%2FLICENSE.txt) ![Static Badge](https://img.shields.io/badge/Current_Version-v1.0.0-orange)
+![Static Badge](https://img.shields.io/badge/License-Apache_2.0-green?link=https%3A%2F%2Fgithub.com%2FTheGreatNacho%2FNPrompt%2Fblob%2Fmain%2FLICENSE.txt) ![Static Badge](https://img.shields.io/badge/Current_Version-v1.0.1-orange)
 > NPrompt: A Lightweight C# Command-Line Interface Library for User Interaction
 
 ## Introduction
