@@ -17,7 +17,7 @@ namespace NachoPrompt
         /// <summary>
         /// The current library version number.
         /// </summary>
-        public static readonly string Version = "1.0.0";
+        public static readonly string Version = "1.0.1";
         private static string userChar = ": ";
         private static char findChar = '/';
         private static bool echoReturn = true;
@@ -463,7 +463,7 @@ namespace NachoPrompt
             return pass;
         }
 
-        private static string GenerateCaptureString(Random rand, int length, bool complex = false)
+        private static string GenerateCaptchaString(Random rand, int length, bool complex = false)
         {
             string output = "";
             char randomChar;
@@ -500,22 +500,22 @@ namespace NachoPrompt
             return output;
         }
         /// <summary>
-        /// Prompt for a capture to weed out bots
+        /// Prompt for a captcha to weed out bots
         /// </summary>
         /// <param name="msg">Prompt message</param>
-        /// <param name="length">The length of the capture. Default is <c>6</c></param>
+        /// <param name="length">The length of the captcha. Default is <c>6</c></param>
         /// <param name="random">An instance of <see cref="Random"/>. Default is <see cref="Random.Shared"/></param>
         /// <returns></returns>
-        public static bool AskCapture(string msg = "Enter the capture", int length = 6, Random? random = null)
+        public static bool AskCaptcha(string msg = "Enter the captcha", int length = 6, Random? random = null)
         {
             random ??= Random.Shared;
-            string capture = GenerateCaptureString(random, length);
+            string captcha = GenerateCaptchaString(random, length);
             Dictionary<string, bool> validDict = new()
             {
-                { capture, true }, // Our specified capture
+                { captcha, true }, // Our specified captcha
                 { "\0", false } // Literally anything else
             };
-            return Ask<bool>($"{msg} [{capture}]", caseSensitive: true, valids: validDict, allowAuto: false);
+            return Ask<bool>($"{msg} [{captcha}]", caseSensitive: true, valids: validDict, allowAuto: false);
         }
 
         /// <summary>

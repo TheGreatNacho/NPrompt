@@ -9,7 +9,7 @@
     <RepositoryUrl>https://github.com/TheGreatNacho/NPrompt.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <AssemblyName>$(MSBuildProjectName)v1.0.0</AssemblyName>
+    <AssemblyName>$(MSBuildProjectName)v1.0.1</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
