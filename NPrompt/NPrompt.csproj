@@ -6,6 +6,17 @@
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <RootNamespace>NachoPrompt</RootNamespace>
+    <RepositoryUrl>https://github.com/TheGreatNacho/NPrompt.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <AssemblyName>$(MSBuildProjectName)v1.0.0</AssemblyName>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\..\..\source\repos\NPrompt\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
