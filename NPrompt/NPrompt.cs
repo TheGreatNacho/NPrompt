@@ -505,11 +505,12 @@ namespace NachoPrompt
         /// <param name="msg">Prompt message</param>
         /// <param name="length">The length of the captcha. Default is <c>6</c></param>
         /// <param name="random">An instance of <see cref="Random"/>. Default is <see cref="Random.Shared"/></param>
+        /// <param name="complex">Should the captcha include complex symbols</param>
         /// <returns></returns>
-        public static bool AskCaptcha(string msg = "Enter the captcha", int length = 6, Random? random = null)
+        public static bool AskCaptcha(string msg = "Enter the captcha", int length = 6, Random? random = null, bool complex = false)
         {
             random ??= Random.Shared;
-            string captcha = GenerateCaptchaString(random, length);
+            string captcha = GenerateCaptchaString(random, length, complex);
             Dictionary<string, bool> validDict = new()
             {
                 { captcha, true }, // Our specified captcha
